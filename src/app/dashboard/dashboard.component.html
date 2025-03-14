@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.component.css">
+  <title>Dashboard</title>
+</head>
+<body>
+  <div class="menu-dashboard">
+    <!-- Top Menu -->
+    <div class="top-menu">
+      <div class="logo">
+        <img src="assets/img/bio_code.png" alt="Logo" />
+        <span>BIO CODE</span>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="input-search">
+      <i class="bx bx-search"></i>
+      <input type="text" class="input" placeholder="Buscar">
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+      <div class="enlace">
+        <a href="error-500">
+          <i class="bx bx-group"></i>
+          <span>Usuarios</span>
+        </a>
+      </div>
+      <div class="enlace">
+        <a href="/dashboard/parqueadero">
+          <i class="bx bx-car"></i>
+          <span>Parqueadero</span>
+        </a>
+      </div>
+      <div class="enlace">
+        <a [routerLink]="['/dashboard/listas']">
+          <i class="bx bx-list-check"></i>
+          <span>Asistencia</span>
+        </a>
+      </div>
+      <div class="enlace">
+        <a href="/dashboard/dispositivos">
+            <i class="bx bx-laptop"></i>          
+            <span>Dispositivos</span>
+        </a>
+      </div>
+      <div class="enlace">
+        <a [routerLink]="['/dashboard/perfil']">
+          <i class="bx bx-user-circle"></i>
+          <span>Perfil</span>
+        </a>
+      </div>
+      <!-- Botón de Cerrar Sesión -->
+      <div class="enlace">
+        <a href="#" onclick="cerrarSesion()">
+          <i class="bx bx-log-out"></i>
+          <span>Cerrar Sesión</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Bienvenido al Dashboard</h1>
+    <p>
+      Este es el espacio principal para gestionar las diferentes áreas de la aplicación.
+    </p>
+    <img src="https://www.semana.com/resizer/v2/OTBFSC7KE5FW5NTN5EHFJJ64OY.jpg?auth=a61c80a1b744d5d17f4369dbe863cdbc0fe0b034c713544dfdc885db4c028dac&smart=true&quality=75&width=1280&fitfill=false" alt="Foto de perfil">
+
+    <!-- Mensaje de éxito o error -->
+    <div id="mensaje" class="message"></div>
+  </div>
+
+  <script>
+    function cerrarSesion() {
+      // Simulando el cierre de sesión
+      let exito = true; // Cambia a false para simular un error
+
+      // Mostrar mensaje según el resultado
+      let mensaje = document.getElementById("mensaje");
+      if (exito) {
+        mensaje.textContent = "Sesión cerrada con éxito";
+        mensaje.className = "message success"; // Estilo de éxito
+      } else {
+        mensaje.textContent = "Hubo un error al cerrar sesión";
+        mensaje.className = "message error"; // Estilo de error
+      }
+      
+      mensaje.style.display = "block"; // Mostrar el mensaje
+    }
+  </script>
+  
+</body>
+</html>

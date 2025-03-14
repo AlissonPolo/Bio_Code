@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #444;
+    padding-top: 70px; 
+
+}
+.navbar {
+    background-color: #e56100;
+}
+
+.navbar-toggler-icon {
+    background-color: white; 
+}
+
+.navbar-brand img {
+    height: 50px;
+    margin-right: 10px;
+    
+}
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.section-heading {
+    color: #e56100;    
+    padding-top: 70px; 
+
+}
+.footer {
+    color: #fff;
+    background-color: #e56100;
+}

@@ -1,0 +1,93 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="listas.component.css">
+    <title>Perfil</title>
+  </head>
+  
+  <body>
+    <div class="lista-container">
+      <h2>Lista de Asistencia</h2>
+  
+      
+  
+      <!-- Barra de búsqueda -->
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar usuario" aria-describedby="buscar-btn">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" id="buscar-btn" type="button">Buscar</button>
+        </div>
+      </div>
+      <!-- Alerta informativa con contadores -->
+      <div class="alert alert-info">
+        <ul>
+            
+            <div class="alert alert-success" role="alert">
+                <i class="bx bx-check"></i> Asistió: <span>{{ contadores.asistidos }}</span>
+          </div>
+          <div class="alert alert-danger" role="alert">
+            <i class="bx bx-x"></i>No asistió: <span>{{ contadores.noAsistidos }}</span>
+          </div>
+          <div class="alert alert-secondary" role="alert">
+            <i class="bx bx-dots-horizontal-rounded"></i> Novedad
+          </div>
+        </ul>
+      </div>
+  
+      <!-- Sección de cada programa -->
+      <div *ngFor="let programa of programas" class="programa-section">
+        <ul class="usuarios-list">
+          <li *ngFor="let usuario of programa.usuarios" class="usuario-item">
+            <div class="usuario-info">
+              <p class="id"><strong>Id: </strong>{{ usuario.id }}</p>
+              <p class="nombre"><strong>Nombre: </strong>{{ usuario.nombre }}</p>
+              <p class="ocupacion"><strong>Fecha: </strong>{{ usuario.fecha }}</p>
+              <p class="email"><strong>Email: </strong>{{ usuario.email }}</p>
+              <p class="telefono"><strong>Teléfono: </strong>{{ usuario.telefono }}</p>
+              <p class="ficha"><strong>Ficha: </strong>{{ usuario.ficha }}</p>
+            </div>
+  
+            <!-- Botones de acción -->
+            <div class="acciones">
+              <button type="button" class="btn btn-success" (click)="marcarAsistencia(usuario, 'asistido')">
+                <i class="bx bx-check"></i>
+              </button>
+              <button type="button" class="btn btn-danger" (click)="marcarAsistencia(usuario, 'noAsistido')">
+                <i class="bx bx-x"></i>
+              </button>
+              <button type="button" class="btn btn-warning" (click)="mostrarOpciones(usuario)">
+                <i class="bx bx-dots-horizontal"></i>
+              </button>
+            </div>
+  
+            <!-- Opciones de Novedad -->
+            <div *ngIf="usuario.mostrarOpciones" class="novedad-options">
+              <label for="descripcion">Descripción de Novedad:</label>
+              <input type="text" id="descripcion" class="form-control" [(ngModel)]="usuario.descripcion" placeholder="Escribe una descripción...">
+  
+              <label for="adjunto">Adjuntar archivo:</label>
+              <input type="file" id="adjunto" (change)="subirArchivo($event, usuario)" class="form-control">
+  
+              <div class="botones-novedad">
+                <button type="button" class="btn btn-info" (click)="marcarSalida(usuario, 'retraso')">Retraso</button>
+                <button type="button" class="btn btn-warning" (click)="marcarSalida(usuario, 'salidaAnticipada')">Salida anticipada</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+  
+        <!-- Botón para guardar -->
+        <button type="button" class="btn btn-success center">Guardar</button>
+      </div>
+    </div>
+  
+    <!-- Botón fijo para regresar -->
+    <div class="actions">
+      <button class="btn-volver" [routerLink]="['/dashboard']">
+        <i class="bx bx-arrow-back"></i> Volver al Dashboard
+      </button>
+    </div>
+  </body>
+  

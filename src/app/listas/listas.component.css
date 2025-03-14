@@ -1,0 +1,242 @@
+/* Estilo base para el contenedor */
+.lista-container {
+    background-color: #f4f7fc;
+    padding: 40px 20px 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Títulos */
+h2 {
+    font-size: 36px;
+    color: #e56100;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+/* Barra de búsqueda */
+.input-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    width: 90%;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.input-group-append button {
+    padding: 12px 18px;
+    background-color: #e56100;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-group-append button:hover {
+    background-color: #f6934c;
+}
+
+/* Lista de usuarios */
+.usuarios-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.usuario-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.usuario-info {
+    flex: 1;
+    text-align: left;
+}
+
+.usuario-info strong {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Botones de acción sin bordes */
+.acciones button {
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.btn-success {
+
+        background: #ffffff;
+    color: #155724;
+}
+.btn-success:hover {
+    background-color: #d4edda;
+}
+
+.btn-danger {
+    background-color: #ffffff;
+    color: #721c24;
+}
+
+.btn-danger:hover {
+    background-color:  #f8d7da
+    ;
+}
+.btn-warning {
+    background-color: #ffffff;
+    color: #383d41;
+}
+.btn-warning:hover {
+    background-color:  #e2e3e5
+    ;
+}
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Botón de guardar */
+button.center {
+    padding: 12px 18px;
+    background-color: #e56100;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.center:hover {
+    background-color: #f6934c;
+}
+
+/* Botón fijo para regresar */
+.actions {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.btn-volver {
+    background-color: #e56100;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.btn-volver:hover {
+    background-color: #f78b42;
+}
+
+/* Opciones de Novedad */
+.novedad-options {
+    margin-top: 15px;
+    background-color: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 70%;
+    width: 50%;
+}
+
+.novedad-options input[type="text"],
+.novedad-options input[type="file"] {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.novedad-options label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.novedad-options input[type="text"] {
+    margin-bottom: 15px;
+}
+
+.botones-novedad {
+    margin-top: 15px;
+}
+
+.botones-novedad button {
+    margin-right: 10px;
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.botones-novedad .btn-info {
+    background-color: #f78b42;
+    color: #fff;
+}
+
+.botones-novedad .btn-warning {
+    background-color: #f78b42;
+    color: #fff;
+}
+
+.botones-novedad button:hover {
+    transform: scale(1.05);
+}
+
+/* Mejorar la alineación de los botones */
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Alertas */
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: inline;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.alert-secondary {
+    background-color: #e2e3e5;
+    border: 1px solid #d6d8db;
+    color: #383d41;
+}
+
+.alert i {
+    margin-right: 5px;
+}

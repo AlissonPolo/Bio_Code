@@ -1,0 +1,40 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="parqueadero.component.css">
+    <title>Parqueadero</title>
+  </head>
+  
+  <div class="parqueadero-container">
+    <h2>Parqueadero</h2>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Buscar" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button">Buscar</button>
+        </div>
+      </div>
+    <!-- Lista de vehículos -->
+    <ul class="vehiculos-list">
+
+      <li *ngFor="let vehiculo of vehiculos" class="vehiculo-item">
+        <div class="vehiculo-info">
+          <p><strong>Id usuario:</strong> {{ vehiculo.usuario }}</p>
+          <strong>{{ vehiculo.tipo }}:</strong>  {{ vehiculo.placa }}
+          <p><strong>Espacio:</strong> {{ vehiculo.espacio }}</p>
+          <p><strong>Hora de entrada:</strong> {{ vehiculo.horaEntrada }}</p>
+          <p><strong>Fecha:</strong> {{ vehiculo.fecha }}</p>
+
+        </div>
+      </li>
+    </ul>
+  
+    <!-- Botón para regresar al Dashboard -->
+    <div class="actions">
+      <button class="btn-volver" [routerLink]="['/dashboard']">
+        <i class="bx bx-arrow-back"></i> Volver al Dashboard
+      </button>
+    </div>
+  </div>
+  

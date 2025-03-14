@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+  imagenRuta: string = 'assets/img/bio_code.png';
+
 }

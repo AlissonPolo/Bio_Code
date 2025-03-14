@@ -1,0 +1,127 @@
+/* Estilos generales */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+  }
+  
+  .parqueadero-container {
+    background-color: #f7f9fc;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  /* Título */
+  h2 {
+    font-size: 36px;
+    color: #e56100;
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
+  
+  /* Estilo del buscador */
+  .input-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .form-control {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #e56100;
+    box-shadow: 0 0 4px rgba(229, 97, 0, 0.4);
+  }
+  
+  .input-group-append button {
+    padding: 12px 18px;
+    background-color: #e56100;
+    color: #fff;
+    border: 1px solid #e56100;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input-group-append button:hover {
+    background-color: #e78b49;
+  }
+  
+  /* Lista de vehículos */
+  .vehiculos-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .vehiculo-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .vehiculo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .vehiculo-info {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .vehiculo-info strong {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .vehiculo-info p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  /* Botón de regreso */
+  .actions {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .btn-volver {
+    background-color: #e56100;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .btn-volver:hover {
+    background-color: #e78b49;
+  }
+  
+  .btn-volver i {
+    margin-right: 10px;
+  }
+  

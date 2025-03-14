@@ -1,0 +1,261 @@
+/* VARIABLES */
+
+:root{
+    --blanco: #e0e0e0;
+    --azul-opaco: #183f66;
+    --bg-menu: #002141;
+    --bg-body: #c7e3ff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-dashboard{
+    max-width: 250px;
+    height: 160vh;
+    background: var(--bg-menu);
+    padding: 20px;
+}
+
+.top-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-menu .logo{
+    display: flex;
+    align-items: center;
+}
+
+.top-menu .logo img{
+    width: 80px;
+}
+
+.top-menu .logo span{
+    font-size: 20px;
+    margin-left: 20px;
+}
+.input-search{
+    width: 100%;
+    margin: 50px 0;
+    background-color: var(--azul-opaco);
+    padding: 15%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.input-search i{
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.input-search .input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    height: 30px;
+    color: var(--blanco);
+    font-size: 22px;
+}
+
+.menu .enlace{
+    width: 100%;
+    padding: 20px 0 10px 17px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.menu .enlace #cons{
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+.menu .enlace:hover{
+    background-color: var(--azul-opaco);
+}
+.menu .enlace i{
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+a{
+    text-decoration: none;
+    outline: none;
+}
+a:link{
+    color: var(--blanco);
+}
+a:visited{
+    color: var(--blanco);
+}
+a:vlink{
+    color: var(--blanco);
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+
+  /* Dashboard Container */
+  .menu-dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: 100vh;
+    background-color: #e56100; /* Cambiado a naranja */
+    color: #ffffff;
+    position: fixed;
+  }
+
+  /* Top Menu (Header) */
+  .top-menu {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #d35400; /* Un naranja más oscuro */
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  .logo span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff; /* Blanco para resaltar */
+  }
+
+  /* Search Bar */
+  .input-search {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f77e33; /* Naranja suave */
+  }
+
+  .input-search i {
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .input-search .input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #e56100; /* Texto en naranja */
+    font-size: 14px;
+  }
+
+  .input-search .input::placeholder {
+    color: #e56100;
+  }
+
+  /* Sidebar Links */
+  .menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .enlace {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    transition: all 0.3s;
+  }
+
+  .enlace a {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .enlace:hover {
+    background-color: #f77e33; /* Resalta con un naranja más claro */
+    color: #ffffff;
+  }
+
+  .enlace i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #ffffff;
+  }
+
+  .enlace span {
+    font-size: 16px;
+  }
+
+  /* Active Link */
+  .enlace.active {
+    background-color: #d35400; /* Naranja oscuro */
+  }
+
+  .enlace.active i,
+  .enlace.active span {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  /* Main Content */
+  .main-content {
+    margin-left: 280px;
+    padding: 20px;
+  }
+
+  .main-content h1 {
+    font-size: 24px;
+    color: #e56100;
+  }
+
+  .main-content p {
+    font-size: 16px;
+    color: #495057;
+  }
+  .message {
+    display: none;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .success {
+    background-color: #28a745;
+  }
+  .error {
+    background-color: #dc3545;
+  }
+  #perfil-container {
+    display: none !important; /* Esto garantiza que solo el script lo controle */
+  }
+  /* Estilo para la imagen en el dashboard */
+  .main-content img {
+    width: 100%;
+    height: 598px ;
+  }
+  
+  .main-content img {
+    display: block;
+  }
+  

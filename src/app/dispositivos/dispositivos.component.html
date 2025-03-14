@@ -1,0 +1,43 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dispositivos.component.css">
+    <title>dispositivo</title>
+  </head>
+  
+  <div class="dispositivos-container">
+    <h2>Dispositivos - Computadoras</h2>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar usuario" aria-describedby="buscar-btn">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" id="buscar-btn" type="button">Buscar</button>
+        </div>
+      </div>
+    <!-- Lista de computadoras -->
+    <ul class="dispositivos-list">
+      <li *ngFor="let dispositivo of dispositivos" class="dispositivo-item">
+        <div class="dispositivo-info">
+          <strong>{{ dispositivo.tipo }}:</strong> {{ dispositivo.id }}
+          <p><strong>Id usuario:</strong> {{ dispositivo.iduser }}</p>
+          <p><strong>Usuario:</strong> {{ dispositivo.usuario }}</p>
+          <p><strong>Marca:</strong> {{ dispositivo.marca }}</p>
+          <p><strong>Serial:</strong> {{ dispositivo.serial }}</p>
+          <p><strong>Fecha:</strong> {{ dispositivo.fecha }}</p>
+          <p><strong>Hora de Entrada:</strong> {{ dispositivo.horaEntrada }}</p>
+          <p><strong>Hora de Salida:</strong> {{ dispositivo.horaSalida }}</p>
+
+        </div>
+      </li>
+    </ul>
+
+  
+    <!-- Botón para regresar al Dashboard -->
+    <div class="actions">
+      <button class="btn-volver" [routerLink]="['/dashboard']">
+        <i class="bx bx-arrow-back"></i> Volver al Dashboard
+      </button>
+    </div>
+  </div>
+  
